@@ -59,31 +59,31 @@ allow {
 }
 
 # user_is_admin is true if...
-# user_is_admin {
-# 	# for some `i`...
-# 	some i
+user_is_admin {
+	# for some `i`...
+	some i
 
-# 	# "admin" is the `i`-th element in the user->role mappings for the identified user.
-# 	data.users[input.user].roles[i] == "admin"
-# }
+	# "admin" is the `i`-th element in the user->role mappings for the identified user.
+	data.users[input.user].roles[i] == "admin"
+}
 
 # user_is_viewer is true if...
-# user_is_viewer {
-# 	# for some `i`...
-# 	some i
+user_is_viewer {
+	# for some `i`...
+	some i
 
-# 	# "viewer" is the `i`-th element in the user->role mappings for the identified user.
-# 	data.users[input.user].roles[i] == "viewer"
-# }
+	# "viewer" is the `i`-th element in the user->role mappings for the identified user.
+	data.users[input.user].roles[i] == "viewer"
+}
 
 # user_is_granted is a set of permissions for the user identified in the request.
 # The `permission` will be contained if the set `user_is_granted` for every...
-# user_is_granted[permission] {
-# 	some i, j
+user_is_granted[permission] {
+	some i, j
 
-# 	# `role` assigned an element of the user_roles for this user...
-# 	role := data.users[input.user].roles[i]
+	# `role` assigned an element of the user_roles for this user...
+	role := data.users[input.user].roles[i]
 
-# 	# `permission` assigned a single permission from the permissions list for 'role'...
-# 	permission := data.role_permissions[role][j]
-# }
+	# `permission` assigned a single permission from the permissions list for 'role'...
+	permission := data.role_permissions[role][j]
+}
