@@ -30,9 +30,9 @@ allow {
 }
 
 # Allow bob to do anything
-allow {
-	input.user == "bob"
-}
+#allow {
+#	input.user == "bob"
+#}
 
 # you can ignore this rule, it's simply here to create a dependency
 # to another rego policy file, so we can demonstate how to work with
@@ -55,7 +55,7 @@ allow {
 
 	# unless user location is outside US
 	country := data.users[input.user].location.country
-	country == "IN"
+	country == "US"
 }
 
 # user_is_admin is true if...
