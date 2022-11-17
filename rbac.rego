@@ -31,7 +31,7 @@ default allow = false
 
 # Allow bob to do anything
 allow {
-	input.user == "haritha"
+	input.user == "sumith"
 }
 
 # you can ignore this rule, it's simply here to create a dependency
