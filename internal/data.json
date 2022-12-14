@@ -67,6 +67,10 @@
       {
         "action": "update",
         "type": "finance"
+      },
+      {
+        "action": "write",
+        "type": "finance"
       }
     ]
   }
